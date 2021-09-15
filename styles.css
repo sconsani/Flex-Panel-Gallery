@@ -1,0 +1,107 @@
+html{
+	box-sizing: border-box;
+	background: #ffc600;
+	font-family: 'helvetica neue';
+	font-size: 20px;
+	font-weight: 200;
+}
+
+body{
+	margin: 0;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+.panels {
+	min-height: 100vh;
+	overflow: hidden;
+	display: flex;
+}
+
+.panel{
+	background: #6B0F9C;
+	box-shadow: inset 0 0 0 5px rgba(255,255,255,0.1);
+	color: white;
+	text-align: center;
+	align-items: center;
+	/*transitions go here*/
+	font-size: 20px;
+	/*for images for each one*/
+	background-size: cover;
+	background-position: center;
+
+	/*evenly distribute the extra space among each other*/
+	flex: 1;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	/*default for flex is to display left to right*/
+	/*vertically align them on top of each other*/
+	flex-direction: column;
+
+}
+
+/*setting background images for each div panel*/
+.panel1 { background-image:url("img/bayarea-panel.jpg"); }
+.panel2 { background-image:url("img/beach-panel.jpg"); }
+.panel3 { background-image:url("img/chamonix-panel.jpg"); }
+.panel4 { background-image:url("img/flowers-panel.jpg"); }
+.panel5 { background-image:url("img/tahoe-panel.jpg"); }
+
+/*Flex Children/Items*/
+.panel > * {
+	margin: 0;
+	width: 100%;
+	transition: transform 0.5s;
+	border: 1px solid red;
+
+	flex: 1 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items:center;
+}
+
+/*this is taking the first and last word of the three and hiding them off screen by 100% and -100% using translate Y*/
+/*when we add an animation to this it will pop in and out when we change the translate*/
+.panel > *:first-child {
+	transform: translateY(-100%);
+}
+
+.panel > *:last-child {
+	transform: translateY(100%);
+}
+
+.panel p{
+	text-transform: uppercase;
+	font-family: 'Amatic SC', cursive;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+    font-size: 2em;
+}
+
+/*second word in the set is larger*/
+.panel p:nth-child(2) {
+	font-size: 4em;
+}
+
+/*size when panel is open*/
+.panel.open{
+	font-size: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
