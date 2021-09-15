@@ -64,7 +64,7 @@ body{
       justify-content: center;
       align-items: center;
     }
-    
+
 /*this is taking the first and last word of the three and hiding them off screen by 100% and -100% using translate Y*/
 /*when we add an animation to this it will pop in and out when we change the translate*/
 .panel > *:first-child { transform: translateY(-100%); }
@@ -92,7 +92,14 @@ body{
 }
 
 
-
+div p{
+	font-size: 12px;
+	color: white;
+	max-width: 100%;
+	text-align: center;
+	margin: 0;
+	padding: 10px;
+}
 
 
 
